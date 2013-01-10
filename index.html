@@ -199,6 +199,9 @@
     right: 22px;
 }
 
+#intro {
+	display: none;
+}
 
 	</style>
 </head>
@@ -215,7 +218,7 @@
 	</nav>
 </header>
 
-<article class="on-slide-intro on-slide-0">
+<article class="on-slide-sample on-slide-0">
 	<section class="slide deck-current" id="intro">
 		<div>
 			<hgroup>
@@ -234,9 +237,8 @@
 		</div>
 	</section>
 
-
-<section class="slide deck-next" id="sample">
-</section>
+	<section class="slide deck-next" id="sample">
+	</section>
 
 </article>
 
@@ -251,5 +253,15 @@
 <script src="./extensions/status/deck.status.js"></script>
 <script src="./extensions/hash/deck.hash.js"></script>
 <script src="home.js"></script>
+	<script>
+	$(function() {
+		console.log(123);
+	})
+	location.hash = "#sample";
+	$('#intro').show()
+	//setTimeout(location.hash = "#intro", 2000);
+	setTimeout(function(){location.hash = "#intro"}, 1000);
+	</script>
+
 </body>
 </html>
