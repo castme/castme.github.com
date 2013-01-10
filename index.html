@@ -18,6 +18,189 @@
 	<link rel="stylesheet" href="./css/home.css">
 
 	<script src="modernizr.custom.js"></script><style type="text/css"></style>
+	<style>
+.wrapper-simple {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: 60px;
+	height: 45px;
+	padding: 10px 5px;
+/*
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f5fafe), to(#e2edf4));
+	background-image: -webkit-linear-gradient(top, #f5fafe, #e2edf4);
+	background-image:    -moz-linear-gradient(top, #f5fafe, #e2edf4); 
+   background-image:     -ms-linear-gradient(top, #f5fafe, #e2edf4); 
+   background-image:      -o-linear-gradient(top, #f5fafe, #e2edf4); 
+   background-image:         linear-gradient(to bottom, #f5fafe, #e2edf4);
+*/
+	background: rgba(1, 1, 1, 0.45);
+	border-radius: 5px;
+
+	box-shadow: inset rgba(255, 254, 255, 1) 0 0.1em 2px,
+					#fff 0 1px 2px;
+	position: relative;
+}
+
+.wrapper-simple img {
+	position: absolute;
+	top: 1.4em;
+	left: 1.5em;
+	z-index: 4;
+	pointer-events: none;
+}
+	
+
+	.search-box1 input, .search-box2 input, .wrapper-simple input[type=text] {
+		font-family: Arial;
+		font-weight: bold;
+		color: #1a3d51;
+		background: rgba(255, 255, 255, 0.65);
+		border-radius:2px;
+		padding: 10px 10px 15px 10px;
+		width: 250px;
+		border: 0;
+		font-size: 16px;
+		text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 1px;
+		box-shadow: inset rgba(0,0,0,.4) 0 1px 1px;
+	}
+		
+		.search-box1 input:focus, .search-box2 input:focus, .wrapper-simple input[type=text]:focus {
+			outline: none;
+		}
+		
+		input::-webkit-input-placeholder {
+			font-family: Arial;
+			font-weight: bold;
+			color: #1a3d51;
+			text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 1px;
+		}
+		
+		input:-moz-placeholder {
+			font-family: Arial;
+			font-weight: bold;
+			color: #1a3d51;
+			text-shadow: rgba(255, 255, 255, 0.7) 1px 1px 1px;
+		}
+		
+	
+.wrapper-simple input[type=text] {
+	position: absolute;
+	width: 1px;
+	z-index: 2;
+	/*padding-left: 2em;*/
+	margin-left: .2em;
+	margin-top: 0;
+}
+
+.wrapper-simple input[type=submit] {
+	color: #fff;
+	margin-top: 0;
+	z-index: 2;
+	position: relative;
+	vertical-align: top;
+	height: 43px;
+	min-width: 55px;
+	max-width: 55px;
+	border-radius: 3px;
+	border: 1px solid #aa7818;
+
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#7E2D00), to(#F1582A));
+	background-image: -webkit-linear-gradient(top, #7E2D00, #F1582A);
+	background-image:    -moz-linear-gradient(top, #7E2D00, #F1582A); 
+   background-image:     -ms-linear-gradient(top, #7E2D00, #F1582A); 
+   background-image:      -o-linear-gradient(top, #7E2D00, #F1582A); 
+   background-image:         linear-gradient(to bottom, #7E2D00, #F1582A);
+
+	box-shadow: inset rgba(255, 255, 255, .5) 0 0.1em 0.1em;
+	cursor: pointer;
+}
+
+
+.bubble {
+    background-color: #fff0a0;
+/*
+    background-image: -webkit-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:    -moz-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:     -ms-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:      -o-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:         linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.5),
+                3px 3px 0 hsla(0,0%,0%,.1);
+*/
+
+	background: rgba(1, 1, 1, 0.45);
+	border-radius: 5px;
+
+	box-shadow: inset rgba(255, 254, 255, 1) 0 0.1em 2px,
+					#fff 0 1px 2px;
+
+    color: #fff;
+    display: inline-block;
+    font: 16px/25px sans-serif;
+    padding: 15px 25px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+}
+.bubble:after, .bubble:before {
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid #F1582A;
+    bottom: -25px;
+    content: '';
+    position: absolute;
+    right: 25px;
+}
+.bubble:before {
+    border-right: 25px solid hsla(0,0%,0%,.1);
+    bottom: -28px;
+    right: 22px;
+}
+
+.bubble2 {
+/*
+    background-color: #fff0a0;
+    background-image: -webkit-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:    -moz-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:     -ms-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:      -o-linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    background-image:         linear-gradient(top, hsla(0,0%,100%,.5), hsla(0,0%,100%,0));
+    border-radius: 5px;
+    box-shadow: inset 0 1px 1px hsla(0,0%,100%,.5),
+                3px 3px 0 hsla(0,0%,0%,.1);
+  */
+	background: rgba(1, 1, 1, 0.45);
+	border-radius: 5px;
+
+	box-shadow: inset rgba(255, 254, 255, 1) 0 0.1em 2px,
+					#fff 0 1px 2px;
+
+    color: #fff;
+    display: inline-block;
+    font: 16px/25px sans-serif;
+    padding: 15px 25px;
+    position: relative;
+    text-shadow: 0 1px 1px hsla(0,0%,100%,.5);
+}
+
+.bubble2:after, .bubble2:before {
+    border-bottom: 25px solid transparent;
+    border-right: 25px solid #fff;
+    bottom: -25px;
+    content: '';
+    position: absolute;
+    right: 60px;
+}
+
+
+.bubble2:after {
+    border-right: 25px solid hsla(0,0%,0%,.1);
+    bottom: -28px;
+    right: 22px;
+}
+
+
+	</style>
 </head>
 
 <body class="home">
@@ -26,8 +209,8 @@
 	<nav>
 		<h1><a href=".">castme.si</a></h1>
 		<ul>
-			<li><a href="./introduction">Getting Started</a></li>
-			<li><a href="./docs">Docs</a></li>
+			<li><a href="#./introduction">Tell me more</a></li>
+			<li><a href="#./about">About</a></li>
 		</ul>
 	</nav>
 </header>
@@ -36,8 +219,17 @@
 	<section class="slide deck-current" id="intro">
 		<div>
 			<hgroup>
+				<h1><span class="bubble">For agencies.</span>
+				<span class="bubble2">For talents</span></h1>
 				<h1>castme.si</h1>
-				<h2>Nothing acts like castme.si</h2>
+				<h2>Nothing acts like castme.si
+				<div class="wrapper-simple" style="width: 300px;">
+					<input type="text" placeholder="Email me, I want to be first!" style="width: 250px;">
+					<input type="submit" value="Send" style="margin-left: 22em;">
+					<!--
+					<img src="images/search-icon-big.png" style="margin-left: -5px;">
+				-->
+				</div></h2>
 			</hgroup>
 		</div>
 	</section>
